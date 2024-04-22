@@ -1,4 +1,4 @@
-# vscode-remote-development-scripts
+# windows-wsl2
 Mac -> Windows(WSL2) に SSH 接続して VSCode Remote Development を実現するための便利スクリプト集
 
 ## 前提
