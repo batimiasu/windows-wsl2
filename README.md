@@ -18,7 +18,6 @@ Mac -> Windows(WSL2) に SSH 接続して VSCode Remote Development を実現す
 New-NetFireWallRule -DisplayName 'WSL 2 Firewall Unlock' -Direction Inbound -LocalPort 22 -Action Allow -Protocol TCP
 New-NetFireWallRule -DisplayName 'WSL 2 Firewall Unlock' -Direction Outbound -LocalPort 22 -Action Allow -Protocol TCP
 ```
+- WSL2 をアップデートするとファイアウォールの設定もリセットされるので再設定する。
 - Windows または WSL2 を再起動すると WSL2 の IP アドレスが変わってしまうのでポートフォワーディングを再設定する必要がある。Windows のタスクスケジューラなどで起動後に `portforwardning.ps1` を実行すると良さそう。
-- 　WSL2 をアップデートするとファイアウォールの設定もリセットされるので再設定する。
 - 同様に WSL2 の sshd も自動起動しないので `wsl2_ssh_restart.bat` を起動後に実行すると良さそう。
-- VSCode の PlayStation Managed Debugger Extension は使えなさそう？
